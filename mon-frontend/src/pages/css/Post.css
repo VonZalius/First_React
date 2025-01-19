@@ -1,0 +1,38 @@
+.post-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.post-title {
+    font-size: 32px;
+    color: #222;
+}
+
+.post-content {
+    font-size: 18px;
+    color: #333;
+}
+
+.post-image {
+    max-width: 100%; /* L'image ne dépassera pas sa taille d'origine */
+    height: auto; /* Garde le ratio correct */
+    max-height: 400px; /* Limite la hauteur sans déformer */
+    object-fit: contain; /* Empêche le crop, garde tout visible */
+    border-radius: 8px; /* Arrondi léger pour le style */
+    display: block; /* Évite l’espace en dessous */
+    margin: 20px auto; /* Centre l’image */
+}
+
+.back-to-blog {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+.back-to-blog:hover {
+    color: #005bb5;
+}
+

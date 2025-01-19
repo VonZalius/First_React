@@ -22,3 +22,9 @@ nav a {
   text-decoration: none;
   font-weight: bold;
 }
+
+.loading, .error {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(255, 0, 0);
+}

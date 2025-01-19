@@ -1,0 +1,43 @@
+.blog-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.blog-title a {
+    text-decoration: none;
+    color: #0073e6;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.blog-title a:hover {
+    color: #005bb5;
+}
+
+.blog-preview {
+    font-size: 16px;
+    color: #333;
+}
+
+.blog-image {
+    max-width: 100%; /* L'image ne dépasse pas sa taille d'origine */
+    height: auto; /* Garde le ratio correct */
+    max-height: 300px; /* Limite la hauteur sans déformer */
+    object-fit: contain; /* Empêche le crop, garde tout visible */
+    border-radius: 8px; /* Arrondi léger pour le style */
+    display: block; /* Évite l’espace en dessous */
+    margin-bottom: 10px; /* Espace entre l'image et le texte */
+}
+
+

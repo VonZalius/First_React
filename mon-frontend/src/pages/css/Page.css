@@ -1,0 +1,15 @@
+.page-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.page-title {
+    font-size: 32px;
+    color: #222;
+}
+
+.page-content {
+    font-size: 18px;
+    color: #333;
+}

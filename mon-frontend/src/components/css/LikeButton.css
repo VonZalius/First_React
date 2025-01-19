@@ -1,0 +1,22 @@
+.like-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.heart {
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out;
+}
+
+.heart:hover {
+  transform: scale(1.2);
+}
+
+.heart.liked {
+  color: red;
+}
+
+  
