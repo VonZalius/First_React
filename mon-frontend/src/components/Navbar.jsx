@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import config from "../config";
 
 function Navbar() {
     const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
-        axios.get("http://madebyqwerty.local/wp-json/custom/v1/menus")
+        axios.get(`${config.API.MENUS}`)
             .then(response => setMenuItems(response.data))
             .catch(error => console.error("Erreur menu :", error));
     }, []);

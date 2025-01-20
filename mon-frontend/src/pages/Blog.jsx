@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import config from "../config";
 import "./css/Blog.css"; 
 import LikeButton from "../components/LikeButton";
 
@@ -11,7 +12,7 @@ function Blog() {
 
     useEffect(() => {
         let isMounted = true;
-        axios.get("http://madebyqwerty.local/wp-json/wp/v2/posts?_embed")
+        axios.get(`${config.API.POSTS}?_embed`)
             .then(response => {
                 if (isMounted) {
                     setBlog(response.data); // Correction ici

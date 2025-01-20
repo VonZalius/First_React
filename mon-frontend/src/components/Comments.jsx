@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import config from "../config";
 import "./css/Comments.css";
 
 function Comments({ postId }) {
@@ -11,7 +12,7 @@ function Comments({ postId }) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://madebyqwerty.local/wp-json/wp/v2/comments?post=${postId}`)
+        axios.get(`${config.API.COMMENTS}?post=${postId}`)
             .then(response => {
                 setComments(response.data);
                 setLoading(false);
@@ -30,7 +31,7 @@ function Comments({ postId }) {
             return;
         }
 
-        axios.post("http://madebyqwerty.local/wp-json/wp/v2/comments", {
+        axios.post(`${config.API.COMMENTS}`, {
             post: postId,
             content: newComment,
             author_name: authorName,

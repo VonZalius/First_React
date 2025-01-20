@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import config from "../config";
 
 function Page() {
     const { id } = useParams();
@@ -9,7 +10,7 @@ function Page() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://madebyqwerty.local/wp-json/wp/v2/pages/${id}`)
+        axios.get(`${config.API.PAGES}/${id}`)
             .then(response => {
                 setPage(response.data);
                 setLoading(false);

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import config from "../config";
 import "./css/Post.css"; 
 import Comments from "../components/Comments";
 import LikeButton from "../components/LikeButton";
@@ -14,7 +15,7 @@ function Post() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://madebyqwerty.local/wp-json/wp/v2/posts/${id}?_embed`) // Ajout de _embed pour récupérer l'image
+        axios.get(`${config.API.POSTS}/${id}?_embed`) // Ajout de _embed pour récupérer l'image
             .then(response => {
                 setPost(response.data);
                 setLoading(false);

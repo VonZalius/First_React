@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import axios from "axios";
+import config from "./config";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
@@ -13,7 +14,7 @@ function App() {
     const [logo, setLogo] = useState(null);
 
     useEffect(() => {
-        axios.get("http://madebyqwerty.local/wp-json/custom/v1/settings")
+        axios.get(`${config.API.SETTINGS}`)
             .then(response => {
                 setSiteTitle(response.data.title);
                 setSiteTagline(response.data.description);
